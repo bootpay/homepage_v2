@@ -1,0 +1,398 @@
+/* 부트페이 컴포넌트 스타일 */
+
+/* 카드 컴포넌트 */
+.bootpay-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: var(--shadow-xl);
+  border-radius: 24px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bootpay-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-2xl);
+}
+
+.bootpay-card-feature {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: var(--shadow-lg);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.bootpay-card-feature:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: var(--shadow-xl);
+}
+
+/* 버튼 컴포넌트 */
+.bootpay-button {
+  background: var(--bootpay-blue);
+  color: white;
+  border: none;
+  border-radius: 16px;
+  padding: 16px 32px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.bootpay-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.bootpay-button:hover::before {
+  left: 100%;
+}
+
+.bootpay-button:hover {
+  background: var(--bootpay-blue-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(49, 130, 246, 0.4);
+}
+
+.bootpay-button-secondary {
+  background: white;
+  color: var(--bootpay-blue);
+  border: 2px solid var(--bootpay-blue);
+  box-shadow: var(--shadow-sm);
+}
+
+.bootpay-button-secondary:hover {
+  background: var(--bootpay-blue-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.bootpay-button-ghost {
+  background: transparent;
+  color: var(--bootpay-gray-700);
+  border: 2px solid var(--bootpay-gray-200);
+}
+
+.bootpay-button-ghost:hover {
+  background: var(--bootpay-gray-50);
+  border-color: var(--bootpay-gray-300);
+  transform: translateY(-2px);
+}
+
+/* 배지 컴포넌트 */
+.bootpay-badge {
+  display: inline-flex;
+  align-items: center;
+  background: var(--bootpay-blue-light);
+  color: var(--bootpay-blue);
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid rgba(49, 130, 246, 0.2);
+}
+
+.bootpay-badge-success {
+  background: var(--bootpay-green-light);
+  color: var(--bootpay-green);
+  border-color: rgba(0, 212, 170, 0.2);
+}
+
+.bootpay-badge-warning {
+  background: var(--bootpay-yellow-light);
+  color: var(--bootpay-yellow);
+  border-color: rgba(255, 184, 0, 0.2);
+}
+
+/* 아이콘 박스 */
+.bootpay-icon-box {
+  width: 64px;
+  height: 64px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  transition: all 0.3s ease;
+}
+
+.bootpay-icon-box:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.bootpay-icon-box.blue {
+  background: var(--bootpay-blue-light);
+  color: var(--bootpay-blue);
+}
+
+.bootpay-icon-box.green {
+  background: var(--bootpay-green-light);
+  color: var(--bootpay-green);
+}
+
+.bootpay-icon-box.yellow {
+  background: var(--bootpay-yellow-light);
+  color: var(--bootpay-yellow);
+}
+
+.bootpay-icon-box.red {
+  background: var(--bootpay-red-light);
+  color: var(--bootpay-red);
+}
+
+/* 입력 필드 */
+.bootpay-input {
+  width: 100%;
+  padding: 16px 20px;
+  border: 2px solid var(--bootpay-gray-200);
+  border-radius: 12px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.bootpay-input:focus {
+  outline: none;
+  border-color: var(--bootpay-blue);
+  box-shadow: 0 0 0 3px rgba(49, 130, 246, 0.1);
+}
+
+.bootpay-input:hover {
+  border-color: var(--bootpay-gray-300);
+}
+
+/* 네비게이션 */
+.bootpay-nav {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--bootpay-gray-200);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.bootpay-nav-link {
+  color: var(--bootpay-gray-700);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.bootpay-nav-link:hover {
+  color: var(--bootpay-blue);
+}
+
+.bootpay-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--bootpay-blue);
+  transition: width 0.3s ease;
+}
+
+.bootpay-nav-link:hover::after {
+  width: 100%;
+}
+
+/* 헤더 */
+.bootpay-header {
+  padding: 20px 0;
+}
+
+.bootpay-logo {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--bootpay-blue);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* 히어로 섹션 */
+.bootpay-hero {
+  background: linear-gradient(135deg, var(--bootpay-blue-light) 0%, white 50%, var(--bootpay-gray-50) 100%);
+  padding: 120px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.bootpay-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23E8F3FF" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
+}
+
+.bootpay-hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* 데모 카드 */
+.bootpay-demo-card {
+  background: white;
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: var(--shadow-2xl);
+  border: 1px solid var(--bootpay-gray-100);
+  position: relative;
+}
+
+.bootpay-demo-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, var(--bootpay-blue), var(--bootpay-green), var(--bootpay-yellow));
+  border-radius: 24px;
+  z-index: -1;
+  opacity: 0.1;
+}
+
+/* 플로팅 요소 */
+.bootpay-floating {
+  position: absolute;
+  background: var(--bootpay-gradient-primary);
+  color: white;
+  padding: 16px;
+  border-radius: 50%;
+  box-shadow: var(--shadow-xl);
+  animation: float 6s ease-in-out infinite;
+}
+
+.bootpay-floating:nth-child(2) {
+  animation-delay: -2s;
+}
+
+.bootpay-floating:nth-child(3) {
+  animation-delay: -4s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+/* 섹션 제목 */
+.bootpay-section-title {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.bootpay-section-title h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 24px;
+  background: linear-gradient(135deg, var(--bootpay-gray-900), var(--bootpay-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bootpay-section-title p {
+  font-size: 1.25rem;
+  color: var(--bootpay-gray-600);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* 통계 카드 */
+.bootpay-stat-card {
+  background: white;
+  border-radius: 20px;
+  padding: 32px;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--bootpay-gray-100);
+  transition: all 0.3s ease;
+}
+
+.bootpay-stat-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+}
+
+.bootpay-stat-number {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--bootpay-blue);
+  margin-bottom: 8px;
+}
+
+.bootpay-stat-label {
+  color: var(--bootpay-gray-600);
+  font-weight: 500;
+}
+
+/* 테스티모니얼 */
+.bootpay-testimonial {
+  background: white;
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--bootpay-gray-100);
+  position: relative;
+}
+
+.bootpay-testimonial::before {
+  content: '"';
+  position: absolute;
+  top: -20px;
+  left: 32px;
+  font-size: 4rem;
+  color: var(--bootpay-blue-light);
+  font-family: serif;
+}
+
+.bootpay-testimonial-content {
+  font-style: italic;
+  color: var(--bootpay-gray-700);
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.bootpay-testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.bootpay-testimonial-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--bootpay-gradient-primary);
+}
+
+.bootpay-testimonial-info h4 {
+  color: var(--bootpay-gray-900);
+  font-weight: 600;
+  margin: 0;
+}
+
+.bootpay-testimonial-info p {
+  color: var(--bootpay-gray-600);
+  margin: 0;
+  font-size: 14px;
+}
