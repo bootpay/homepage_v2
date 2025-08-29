@@ -1,117 +1,5 @@
 // 부트페이 메인 JavaScript
 
-document.addEventListener('DOMContentLoaded', function() {
-    // 컴포넌트 로드
-    loadComponents();
-    
-    // 스크롤 애니메이션 초기화
-    initScrollAnimations();
-    
-    // 인터랙티브 요소 초기화
-    initInteractiveElements();
-    
-    // 모바일 메뉴 초기화
-    initMobileMenu();
-});
-
-// 컴포넌트 로드 함수
-async function loadComponents() {
-    const components = [
-        { id: 'header-container', file: 'components/header.html' },
-        { id: 'hero-container', file: 'components/hero.html' },
-        { id: 'problem-container', file: 'components/problem.html' },
-        { id: 'solution-container', file: 'components/solution.html' },
-        { id: 'features-container', file: 'components/features.html' },
-        { id: 'use-cases-container', file: 'components/use-cases.html' },
-        { id: 'integration-container', file: 'components/integration.html' },
-        { id: 'analytics-container', file: 'components/analytics.html' },
-        { id: 'trust-container', file: 'components/trust.html' },
-        { id: 'cta-container', file: 'components/cta.html' },
-        { id: 'footer-container', file: 'components/footer.html' }
-    ];
-    
-    for (const component of components) {
-        try {
-            const response = await fetch(component.file);
-            if (response.ok) {
-                const html = await response.text();
-                document.getElementById(component.id).innerHTML = html;
-            } else {
-                throw new Error(`HTTP ${response.status}`);
-            }
-        } catch (error) {
-            console.warn(`Failed to load component: ${component.file}`, error);
-            // Fallback: 기본 HTML 내용 제공
-            loadFallbackContent(component.id);
-        }
-    }
-}
-
-// Fallback 콘텐츠 로드
-function loadFallbackContent(containerId) {
-    const container = document.getElementById(containerId);
-    if (!container) return;
-    
-    // 각 컨테이너별 기본 콘텐츠
-    const fallbackContent = {
-        'header-container': `
-            <header class="bootpay-nav">
-                <div class="container-wide">
-                    <nav class="flex items-center justify-between py-6">
-                        <div class="bootpay-logo">
-                            <i class="fa-solid fa-bolt"></i>
-                            <span>부트페이</span>
-                        </div>
-                        <div class="hidden lg:flex items-center space-x-8">
-                            <a href="#payment" class="bootpay-nav-link">결제</a>
-                            <a href="#store" class="bootpay-nav-link">쇼핑몰</a>
-                            <a href="#pricing" class="bootpay-nav-link">가격</a>
-                        </div>
-                        <button class="bootpay-button">시작하기</button>
-                    </nav>
-                </div>
-            </header>
-        `,
-        'hero-container': `
-            <section class="bootpay-hero">
-                <div class="container-wide text-center py-20">
-                    <h1 class="text-5xl lg:text-6xl font-bold mb-8">
-                        결제도, 쇼핑몰도,<br>
-                        <span class="text-gradient">딸깍 한 번으로.</span>
-                    </h1>
-                    <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
-                        코드 몇 줄이면 API 연동, 클릭 한 번이면 쇼핑몰 오픈.<br>
-                        개발자에게는 자유를, 창업자에게는 단순함을.
-                    </p>
-                    <div class="flex flex-wrap justify-center gap-4">
-                        <button class="bootpay-button">결제 시작하기</button>
-                        <button class="bootpay-button-secondary">쇼핑몰 시작하기</button>
-                    </div>
-                </div>
-            </section>
-        `,
-        'footer-container': `
-            <footer class="bg-gray-900 text-white py-16">
-                <div class="container-wide text-center">
-                    <div class="flex items-center justify-center mb-6">
-                        <i class="fa-solid fa-bolt text-blue-400 text-2xl mr-3"></i>
-                        <span class="text-2xl font-bold">부트페이</span>
-                    </div>
-                    <p class="text-gray-400 mb-6">
-                        결제도, 쇼핑몰도, 딸깍 한 번으로.
-                    </p>
-                    <p class="text-gray-500">© 2025 부트페이. All rights reserved.</p>
-                </div>
-            </footer>
-        `
-    };
-    
-    if (fallbackContent[containerId]) {
-        container.innerHTML = fallbackContent[containerId];
-    } else {
-        container.innerHTML = `<div class="p-8 text-center text-gray-500">컴포넌트 로딩 중...</div>`;
-    }
-}
 
 // 스크롤 애니메이션 초기화
 function initScrollAnimations() {
@@ -138,24 +26,28 @@ function initScrollAnimations() {
 function initInteractiveElements() {
     // 버튼 클릭 효과
     document.addEventListener('click', function(e) {
-        if (e.target.classList.contains('bootpay-button') || 
-            e.target.classList.contains('bootpay-button-secondary') ||
-            e.target.classList.contains('bootpay-button-ghost')) {
+        if (e.target && e.target.classList && 
+            (e.target.classList.contains('bootpay-button') || 
+             e.target.classList.contains('bootpay-button-secondary') ||
+             e.target.classList.contains('bootpay-button-ghost'))) {
             
-            // 리플 효과 생성
-            createRippleEffect(e);
+            // 클릭 애니메이션
+            e.target.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                e.target.style.transform = 'scale(1)';
+            }, 150);
         }
     });
     
     // 카드 호버 효과
     document.addEventListener('mouseenter', function(e) {
-        if (e.target.classList.contains('bootpay-card')) {
+        if (e.target && e.target.classList && e.target.classList.contains('bootpay-card')) {
             e.target.style.transform = 'translateY(-8px) scale(1.02)';
         }
     }, true);
     
     document.addEventListener('mouseleave', function(e) {
-        if (e.target.classList.contains('bootpay-card')) {
+        if (e.target && e.target.classList && e.target.classList.contains('bootpay-card')) {
             e.target.style.transform = 'translateY(0) scale(1)';
         }
     }, true);
@@ -330,3 +222,77 @@ const BootpayUtils = {
 
 // 전역 객체에 유틸리티 추가
 window.BootpayUtils = BootpayUtils;
+
+// 통계 숫자 애니메이션
+function initStatsAnimations() {
+    const statNumbers = document.querySelectorAll('.bootpay-stat-number');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const target = entry.target;
+                const finalValue = target.textContent;
+                
+                if (finalValue.includes('₩')) {
+                    const number = parseInt(finalValue.replace(/[₩,]/g, ''));
+                    animateNumber(target, 0, number, 2000, '₩');
+                } else if (finalValue.includes('+')) {
+                    const number = parseInt(finalValue.replace(/[+,]/g, ''));
+                    animateNumber(target, 0, number, 2000, '+');
+                } else if (finalValue.includes('%')) {
+                    const number = parseFloat(finalValue.replace('%', ''));
+                    animateNumber(target, 0, number, 2000, '%');
+                } else {
+                    const number = parseInt(finalValue.replace(/,/g, ''));
+                    animateNumber(target, 0, number, 2000);
+                }
+                
+                observer.unobserve(target);
+            }
+        });
+    });
+    
+    statNumbers.forEach(stat => {
+        observer.observe(stat);
+    });
+}
+
+// 숫자 애니메이션 함수
+function animateNumber(element, start, end, duration, prefix = '') {
+    const startTime = performance.now();
+    const difference = end - start;
+    
+    function updateNumber(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        
+        const current = Math.floor(start + (difference * progress));
+        
+        if (prefix === '₩') {
+            element.textContent = `₩${current.toLocaleString()}`;
+        } else if (prefix === '+') {
+            element.textContent = `+${current.toLocaleString()}`;
+        } else if (prefix === '%') {
+            element.textContent = `${current.toFixed(1)}%`;
+        } else {
+            element.textContent = current.toLocaleString();
+        }
+        
+        if (progress < 1) {
+            requestAnimationFrame(updateNumber);
+        }
+    }
+    
+    requestAnimationFrame(updateNumber);
+}
+
+// DOM 로드 완료 후 통계 애니메이션도 초기화
+document.addEventListener('DOMContentLoaded', function() {
+    // 기존 초기화 함수들
+    initScrollAnimations();
+    initInteractiveElements();
+    initMobileMenu();
+    
+    // 통계 애니메이션 초기화
+    initStatsAnimations();
+});
