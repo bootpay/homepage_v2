@@ -13,3 +13,100 @@
     color: #fff;
     cursor: pointer;
 }
+
+/* 로고 애니메이션 스타일 */
+.logos-container {
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 10%, rgba(255,255,255,1) 90%, rgba(255,255,255,0) 100%);
+}
+
+.logos-row {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.logos-row:last-child {
+    margin-bottom: 0;
+}
+
+.logos-slide {
+    display: flex;
+    width: max-content;
+    animation: slide-left 60s linear infinite;
+}
+
+.logos-slide:hover {
+    animation-play-state: paused;
+}
+
+/* 각 줄마다 다른 시작점과 속도 */
+.logos-row-1 .logos-slide {
+    animation: slide-left 60s linear infinite;
+}
+
+.logos-row-2 .logos-slide {
+    animation: slide-left 80s linear infinite;
+    animation-delay: -20s;
+}
+
+.logos-row-3 .logos-slide {
+    animation: slide-left 70s linear infinite;
+    animation-delay: -35s;
+}
+
+.logo-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 20px;
+    min-width: 120px;
+    height: 60px;
+    transition: all 0.3s ease;
+}
+
+.logo-item:hover {
+    transform: scale(1.1);
+    filter: grayscale(0%) !important;
+    opacity: 1 !important;
+}
+
+.logo-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+@keyframes slide-left {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .logo-item {
+        margin: 0 15px;
+        min-width: 100px;
+        height: 50px;
+    }
+    
+    .logos-slide {
+        animation-duration: 20s;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-item {
+        margin: 0 10px;
+        min-width: 80px;
+        height: 40px;
+    }
+    
+    .logos-slide {
+        animation-duration: 15s;
+    }
+}
