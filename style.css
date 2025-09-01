@@ -1,0 +1,15 @@
+.bootpay {
+    width: 99px;
+    height: 30px;
+    margin: 9px 535px 9px 0;
+    font-family: NanumBarunGothicOTF, sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fff;
+    cursor: pointer;
+}
