@@ -1195,6 +1195,18 @@
         
         <!-- Accordion functionality -->
         <script src="script.js"></script>
+        
+        <!-- AOS Animation Settings -->
+        <script>
+            // 모든 디바이스에서 빠른 애니메이션 설정
+            AOS.init({
+                duration: 300,      // 빠른 애니메이션
+                once: true,
+                offset: 20,         // 가까운 거리에서 트리거
+                delay: 0,           // 지연 없음
+                easing: 'ease-out'
+            });
+        </script>
     </body>
 
 </html>
