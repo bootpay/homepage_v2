@@ -55,20 +55,14 @@
         <!-- Pre Loader end  -->
 
         <div class="app-landing-wrap landing_wrap">
-            <div id="landing_wrap" class="landing-sky-blue">
-
-
-
-
-
-
+            <div id="landing_wrap" class="landing-sky-blue"> 
                 <!--=============== Header start ================-->
                 <div class="main-header header-fixed-default" id="home-header">
                     <nav class="navbar container w-100 navbar-expand-lg navbar-transparent bg-transparent">
 
 
                         <div class="logo">
-                            <div class="bootpay"><a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" style="color: inherit; text-decoration: none;">Bootpay</a></div>
+                            <div class="bootpay text-white"><a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" style="color: inherit; text-decoration: none;">Bootpay</a></div>
                         </div>
 
                         <div class="menu-toggle navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -149,31 +143,27 @@
                 <div class="main-content-wrap">
 
                     <!-- intro-section -->
-                    <section id="intro-wrap" class="intro2Wrap text-white text-center">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-sm">
-                                    <div class="intro2subtitle">
-                                        <h3 class="font-weight-bold mb-3 text-white">PG 연동, 쇼핑몰 제작</h3>
-                                    </div>
-                                    <h1 class="intro2Title font-weight-bold text-42 t-shadow mb-3 text-white">쉽고 빠르게, 딸깍 한번으로.</h1>
-                                    <div class="intro2Description text-18">
-                                        <p class="mb-4">코드 한 줄이면 PG 연동. 클릭 몇 번이면 쇼핑몰 오픈.<br/>
-                                            개발자는 편하게, 창업자는 심플하게.
-                                        </p>
-                                    </div>
-
-                                    <div class="intro2Buttons mb-5">
-                                        <a name="" id="" href="https://demos.ui-lib.com/sessions/signin" class="btn half-button btn-outline-white btn-lg pl-5 pr-5 pb-2 mr-2 mb-4 text-uppercase" href="landing.v9.html#" role="button">
-                                            PG 연동하기
-                                        </a>
-                                        <a id="" href="https://demos.ui-lib.com/sessions/signup" class="btn half-button btn-warning btn-lg pl-5 pr-5 pb-2 mb-4 text-uppercase" href="landing.v9.html#" role="button">
-                                            쇼핑몰 개설하기
-                                        </a>
-                                    </div>
-
-
+                    <section id="intro-wrap" class="intro2Wrap text-white" style="position: relative;">
+                        <div class="container" style="position: relative;">
+                            <div class="intro-fixed-content"> 
+                                <h1 class="intro2Title font-weight-bold text-42 mb-3 text-white">쉽고 빠른 커머스 솔루션</h1>
+                                <div class="intro2Description text-18">
+                                    <p class="mb-4">모든 PG 쉽게 연동<br/>
+                                        커스텀 가능한 쇼핑몰 제공
+                                    </p>
                                 </div>
+                                <div class="intro2Buttons mb-5">
+                                    <a name="" id="" href="https://demos.ui-lib.com/sessions/signin" class="btn half-button btn-outline-white btn-lg pl-5 pr-5 pb-2 mr-2 mb-4 text-uppercase" href="landing.v9.html#" role="button">
+                                        PG 연동하기
+                                    </a>
+                                    <a id="" href="https://demos.ui-lib.com/sessions/signup" class="btn half-button btn-warning btn-lg pl-5 pr-5 pb-2 mb-4 text-uppercase" href="landing.v9.html#" role="button">
+                                        쇼핑몰 개설하기
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="intro-images-wrapper">
+                                <img class="intro-device laptop-device" src="assets/images/2_laptop.svg" alt="부트페이 랩톱 솔루션" data-aos="fade-up" data-aos-delay="200">
+                                <img class="intro-device tablet-device" src="assets/images/3_tablet.svg" alt="부트페이 태블릿 솔루션" data-aos="fade-up" data-aos-delay="600">
                             </div>
                         </div>
                         <div class="overlay">
@@ -186,7 +176,7 @@
 
 
                     <!-- start-problem-section -->
-                     <section id="problem-section" class="problem-wrap p-t-b-80">
+                     <section id="problem-section" class="problem-wrap p-t-b-100" style="position: relative; z-index: 1;">
                          <div class="container">
                              <div class="row">
                                  <div data-aos="fade-up" class="col-md-12 section-header mb-5">
@@ -251,7 +241,7 @@
                      <!-- end-problem-section -->
 
                     <!-- start-solution-section -->
-                     <section id="solution-section" class="problem-wrap p-t-b-80" style="background: linear-gradient(135deg, #fafafa 0%, #fafafa 100%);">
+                     <section id="solution-section" class="problem-wrap p-t-b-100" style="background: linear-gradient(135deg, #fafafa 0%, #fafafa 100%);">
                         <div class="container">
                             <div class="row">
                             <div class="col-md-12 section-header mb-5 text-center">
@@ -380,7 +370,7 @@
                     <!-- end-solution-section -->
 
                     <!-- start-features-section -->
-                    <section id="features-section" class="p-t-b-80 bg-white">
+                    <section id="features-section" class="p-t-b-100 bg-white">
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12 section-header mb-5 text-center">
@@ -392,15 +382,9 @@
                             <!-- Payment Solution -->
                             <div class="row align-items-center mb-5 pb-5">
                                 <div data-aos="fade-right" class="col-lg-6 col-md-12 mb-4">
-                                    <div class="d-inline-flex align-items-center justify-content-center mb-4" style="background-color: #fafafa; border-radius: 16px; padding: 8px;">
-                                        <i class="eva eva-credit-card-outline text-30 p-3" style="color: #525252;"></i>
-                                    </div>
                                     <h3 class="font-weight-bold text-28 mb-4" style="color: #171717;">결제 솔루션</h3>
                                     <div class="mb-4">
                                         <div class="d-flex align-items-start mb-4">
-                                            <div class="d-flex align-items-center justify-content-center mr-3 mt-1" style="width: 32px; height: 32px; background-color: #f5f5f4; border-radius: 50%;">
-                                                <i class="eva eva-checkmark-outline" style="color: #525252;"></i>
-                                            </div>
                                             <div>
                                                 <h4 class="font-weight-bold mb-2" style="color: #171717;">국내 주요 PG 모두 지원</h4>
                                                 <p style="color: #525252; margin-bottom: 0;">카드, 계좌이체, 간편결제 등 모든 결제수단을 한 번에</p>
@@ -428,33 +412,9 @@
                                 </div>
                                 
                                 <div data-aos="fade-left" class="col-lg-6 col-md-12">
-                                    <div class="p-4" style="background-color: #fafafa; border-radius: 16px;">
-                                        <div class="bg-white shadow-lg p-4" style="border-radius: 12px;">
-                                            <div class="d-flex align-items-center justify-content-between mb-3">
-                                                <h4 class="mb-0" style="color: #171717;">결제 위젯</h4>
-                                                <div class="d-flex">
-                                                    <div class="mr-1" style="width: 12px; height: 12px; background-color: #a3a3a3; border-radius: 50%;"></div>
-                                                    <div class="mr-1" style="width: 12px; height: 12px; background-color: #a3a3a3; border-radius: 50%;"></div>
-                                                    <div style="width: 12px; height: 12px; background-color: #a3a3a3; border-radius: 50%;"></div>
-                                                </div>
-                                            </div>
-                                            <div class="mb-3">
-                                                <div class="d-flex align-items-center p-3 mb-2 border" style="border-color: #e5e5e5; border-radius: 8px; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#fafafa'" onmouseout="this.style.backgroundColor='white'">
-                                                    <i class="eva eva-credit-card-outline mr-3" style="color: #525252;"></i>
-                                                    <span>신용카드</span>
-                                                </div>
-                                                <div class="d-flex align-items-center p-3 mb-2 border" style="border-color: #e5e5e5; border-radius: 8px; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#fafafa'" onmouseout="this.style.backgroundColor='white'">
-                                                    <i class="eva eva-credit-card-outline mr-3" style="color: #525252;"></i>
-                                                    <span>계좌이체</span>
-                                                </div>
-                                                <div class="d-flex align-items-center p-3 mb-3 border" style="border-color: #e5e5e5; border-radius: 8px; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#fafafa'" onmouseout="this.style.backgroundColor='white'">
-                                                    <i class="eva eva-smartphone-outline mr-3" style="color: #525252;"></i>
-                                                    <span>간편결제</span>
-                                                </div>
-                                                <button class="btn btn-block py-3" style="background-color: #171717; color: white; border-radius: 8px;">
-                                                    ₩48,000 결제하기
-                                                </button>
-                                            </div>
+                                    <div class="p-4" style="background-color: #fafafa; border-radius: 16px; display: inline-block;">
+                                        <div class="bg-white shadow-sm p-4 " style="border-radius: 12px; display: inline-block;">
+                                            <img src="assets/images/brandpay.png" alt="부트페이 쇼핑몰 설정 인터페이스" class="rounded" style="width: auto; height: 500px; max-width: none; image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;">
                                         </div>
                                     </div>
                                 </div>
@@ -463,9 +423,6 @@
                             <!-- Shopping Mall Solution -->
                             <div class="row align-items-center mb-5 pb-5">
                                 <div data-aos="fade-right" class="col-lg-6 col-md-12 mb-4 order-lg-2">
-                                    <div class="d-inline-flex align-items-center justify-content-center mb-4" style="background-color: #fafafa; border-radius: 16px; padding: 8px;">
-                                        <i class="eva eva-home-outline text-30 p-3" style="color: #525252;"></i>
-                                    </div>
                                     <h3 class="font-weight-bold text-28 mb-4" style="color: #171717;">쇼핑몰 솔루션</h3>
                                     <div class="mb-4">
                                         <div class="d-flex align-items-start mb-4">
@@ -499,38 +456,8 @@
                                 </div>
                                 
                                 <div data-aos="fade-left" class="col-lg-6 col-md-12 order-lg-1">
-                                    <div class="p-4" style="background-color: #fafafa; border-radius: 16px;">
-                                        <div class="bg-white shadow-lg p-4" style="border-radius: 12px;">
-                                            <h4 class="mb-3" style="color: #171717;">쇼핑몰 관리 대시보드</h4>
-                                            <div class="row mb-3">
-                                                <div class="col-6">
-                                                    <div class="text-center p-3" style="background-color: #fafafa; border-radius: 8px;">
-                                                        <div class="text-24 font-weight-bold" style="color: #525252;">₩2.4M</div>
-                                                        <div class="text-12" style="color: #525252;">이번 달 매출</div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-6">
-                                                    <div class="text-center p-3" style="background-color: #fafafa; border-radius: 8px;">
-                                                        <div class="text-24 font-weight-bold" style="color: #525252;">1,247</div>
-                                                        <div class="text-12" style="color: #525252;">총 주문</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="mb-2">
-                                                <div class="d-flex align-items-center justify-content-between p-3 mb-2" style="background-color: #fafafa; border-radius: 8px;">
-                                                    <span class="text-14" style="color: #404040;">정기배송 관리</span>
-                                                    <i class="eva eva-arrow-ios-forward-outline" style="color: #a3a3a3;"></i>
-                                                </div>
-                                                <div class="d-flex align-items-center justify-content-between p-3 mb-2" style="background-color: #fafafa; border-radius: 8px;">
-                                                    <span class="text-14" style="color: #404040;">재고 현황</span>
-                                                    <i class="eva eva-arrow-ios-forward-outline" style="color: #a3a3a3;"></i>
-                                                </div>
-                                                <div class="d-flex align-items-center justify-content-between p-3" style="background-color: #fafafa; border-radius: 8px;">
-                                                    <span class="text-14" style="color: #404040;">정산 내역</span>
-                                                    <i class="eva eva-arrow-ios-forward-outline" style="color: #a3a3a3;"></i>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="p-4" style="background-color: #fafafa; border-radius: 16px; display: flex; justify-content: flex-start;">
+                                        <img src="assets/images/admin-product.png" alt="부트페이 쇼핑몰 설정 인터페이스" class="rounded" style="width: auto; height: 400px; max-width: 100%; image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; margin-left: -50px;">
                                     </div>
                                 </div>
                             </div>
@@ -614,7 +541,7 @@
                     <!-- end-features-section -->
 
                     <!-- start-use-cases-section -->
-                    <section id="use-cases-section" class="p-t-b-80" style="background-color: #fafafa;">
+                    <section id="use-cases-section" class="p-t-b-100" style="background-color: #fafafa;">
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12 section-header mb-5 text-center">
@@ -774,7 +701,7 @@
                     <!-- end-use-cases-section -->
 
                     <!-- start-integration-section -->
-                    <section id="integration-section" class="p-t-b-80 bg-white">
+                    <section id="integration-section" class="p-t-b-100 bg-white">
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12 section-header mb-5 text-center">
@@ -834,38 +761,8 @@
                                 
                                 <div data-aos="fade-left" class="col-lg-6 col-md-12">
                                     <h3 class="font-weight-bold text-24 mb-4" style="color: #171717;">비개발자를 위한 위젯</h3>
-                                    <div class="p-4" style="background-color: #fafafa; border-radius: 16px;">
-                                        <div class="bg-white shadow-sm p-4" style="border-radius: 12px;">
-                                            <h4 class="mb-3" style="color: #171717;">쇼핑몰 설정</h4>
-                                            <div class="mb-3">
-                                                <label class="d-block text-14 mb-2" style="color: #404040;">상품명</label>
-                                                <input type="text" class="form-control" value="프리미엄 상품" readonly style="border-radius: 8px; border: 1px solid #d1d5db;"/>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label class="d-block text-14 mb-2" style="color: #404040;">가격</label>
-                                                <input type="text" class="form-control" value="₩29,000" readonly style="border-radius: 8px; border: 1px solid #d1d5db;"/>
-                                            </div>
-                                            <div class="mb-4">
-                                                <label class="d-block text-14 mb-2" style="color: #404040;">결제 방법</label>
-                                                <div class="row">
-                                                    <div class="col-6">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" checked/>
-                                                            <label class="form-check-label text-14">신용카드</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-6">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" checked/>
-                                                            <label class="form-check-label text-14">계좌이체</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <button class="btn btn-block py-3" style="background-color: #525252; color: white; border-radius: 8px;">
-                                                쇼핑몰 생성하기
-                                            </button>
-                                        </div>
+                                    <div class="p-4" style="background-color: #fafafa; border-radius: 16px; display: inline-block;">
+                                        <img src="assets/images/4_payment.png" alt="부트페이 쇼핑몰 설정 인터페이스" class="rounded" style="width: auto; height: auto; max-width: none;">
                                     </div>
                                     
                                     <div class="mt-4">
@@ -900,148 +797,9 @@
                             
                             <div class="row">
                                 <div data-aos="fade-up" class="col-12 mb-5">
-                                    <div class="bg-white shadow-xl p-4" style="border-radius: 24px;">
-                                        <div class="d-flex align-items-center justify-content-between mb-4">
-                                            <h3 class="font-weight-bold text-24 mb-0" style="color: #171717;">통합 관리 대시보드</h3>
-                                            <div class="d-flex align-items-center">
-                                                <select class="form-control mr-3 text-14" style="border: 1px solid #d1d5db; border-radius: 8px; width: auto;">
-                                                    <option>최근 30일</option>
-                                                    <option>최근 7일</option>
-                                                    <option>최근 1년</option>
-                                                </select>
-                                                <button class="btn text-14" style="background-color: #737373; color: white; border-radius: 8px;"> 
-                                                    엑셀 다운로드
-                                                </button>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="row mb-4">
-                                            <div class="col-lg-3 col-md-6 mb-3">
-                                                <div class="p-4" style="background: linear-gradient(135deg, #fafafa 0%, #f5f5f4 100%); border-radius: 16px;">
-                                                    <div class="d-flex align-items-center justify-content-between mb-2">
-                                                        <i class="eva eva-trending-up-outline text-24" style="color: #525252;"></i>
-                                                        <span class="text-14" style="color: #525252;">+12.5%</span>
-                                                    </div>
-                                                    <div class="text-30 font-weight-bold" style="color: #171717;">₩24.7M</div>
-                                                    <div class="text-16" style="color: #525252;">총 매출</div>
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="col-lg-3 col-md-6 mb-3">
-                                                <div class="p-4" style="background: linear-gradient(135deg, #fafafa 0%, #f5f5f4 100%); border-radius: 16px;">
-                                                    <div class="d-flex align-items-center justify-content-between mb-2">
-                                                        <i class="eva eva-shopping-cart-outline text-24" style="color: #525252;"></i>
-                                                        <span class="text-14" style="color: #525252;">+8.3%</span>
-                                                    </div>
-                                                    <div class="text-30 font-weight-bold" style="color: #171717;">3,247</div>
-                                                    <div class="text-16" style="color: #525252;">총 주문</div>
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="col-lg-3 col-md-6 mb-3">
-                                                <div class="p-4" style="background: linear-gradient(135deg, #fafafa 0%, #f5f5f4 100%); border-radius: 16px;">
-                                                    <div class="d-flex align-items-center justify-content-between mb-2">
-                                                        <i class="eva eva-people-outline text-24" style="color: #525252;"></i>
-                                                        <span class="text-14" style="color: #525252;">+15.7%</span>
-                                                    </div>
-                                                    <div class="text-30 font-weight-bold" style="color: #171717;">1,892</div>
-                                                    <div class="text-16" style="color: #525252;">구독 고객</div>
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="col-lg-3 col-md-6 mb-3">
-                                                <div class="p-4" style="background: linear-gradient(135deg, #fafafa 0%, #f5f5f4 100%); border-radius: 16px;">
-                                                    <div class="d-flex align-items-center justify-content-between mb-2">
-                                                        <i class="eva eva-percent-outline text-24" style="color: #525252;"></i>
-                                                        <span class="text-14" style="color: #525252;">+2.1%</span>
-                                                    </div>
-                                                    <div class="text-30 font-weight-bold" style="color: #171717;">97.2%</div>
-                                                    <div class="text-16" style="color: #525252;">결제 성공률</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="row">
-                                            <div class="col-lg-6 mb-3">
-                                                <div class="p-4" style="background-color: #fafafa; border-radius: 16px;">
-                                                    <h4 class="text-18 mb-3" style="color: #171717;">매출 추이</h4>
-                                                    <div class="bg-white p-3 d-flex align-items-end justify-content-between" style="border-radius: 12px; height: 200px;">
-                                                        <div class="d-flex align-items-end w-100" style="height: 100%;">
-                                                            <div class="mr-2" style="background-color: #e5e5e5; width: 20px; height: 25%; border-radius: 4px 4px 0 0;"></div>
-                                                            <div class="mr-2" style="background-color: #d1d5db; width: 20px; height: 50%; border-radius: 4px 4px 0 0;"></div>
-                                                            <div class="mr-2" style="background-color: #a3a3a3; width: 20px; height: 75%; border-radius: 4px 4px 0 0;"></div>
-                                                            <div class="mr-2" style="background-color: #737373; width: 20px; height: 100%; border-radius: 4px 4px 0 0;"></div>
-                                                            <div class="mr-2" style="background-color: #525252; width: 20px; height: 80%; border-radius: 4px 4px 0 0;"></div>
-                                                            <div class="mr-2" style="background-color: #404040; width: 20px; height: 60%; border-radius: 4px 4px 0 0;"></div>
-                                                            <div style="background-color: #262626; width: 20px; height: 67%; border-radius: 4px 4px 0 0;"></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="d-flex justify-content-between text-14 mt-2" style="color: #525252;">
-                                                        <span>1월</span>
-                                                        <span>2월</span>
-                                                        <span>3월</span>
-                                                        <span>4월</span>
-                                                        <span>5월</span>
-                                                        <span>6월</span>
-                                                        <span>7월</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="col-lg-6 mb-3">
-                                                <div class="p-4" style="background-color: #fafafa; border-radius: 16px;">
-                                                    <h4 class="text-18 mb-3" style="color: #171717;">인기 상품</h4>
-                                                    <div class="mb-3">
-                                                        <div class="d-flex align-items-center justify-content-between bg-white p-3" style="border-radius: 8px;">
-                                                            <div class="d-flex align-items-center">
-                                                                <div class="mr-3" style="width: 40px; height: 40px; background-color: #e5e5e5; border-radius: 8px;"></div>
-                                                                <div>
-                                                                    <div style="color: #171717;">프리미엄 상품</div>
-                                                                    <div class="text-14" style="color: #525252;">₩29,000</div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="text-right">
-                                                                <div style="color: #171717;">847개</div>
-                                                                <div class="text-14" style="color: #525252;">+12%</div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    
-                                                    <div class="mb-3">
-                                                        <div class="d-flex align-items-center justify-content-between bg-white p-3" style="border-radius: 8px;">
-                                                            <div class="d-flex align-items-center">
-                                                                <div class="mr-3" style="width: 40px; height: 40px; background-color: #e5e5e5; border-radius: 8px;"></div>
-                                                                <div>
-                                                                    <div style="color: #171717;">베이직 상품</div>
-                                                                    <div class="text-14" style="color: #525252;">₩19,000</div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="text-right">
-                                                                <div style="color: #171717;">623개</div>
-                                                                <div class="text-14" style="color: #525252;">+8%</div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    
-                                                    <div>
-                                                        <div class="d-flex align-items-center justify-content-between bg-white p-3" style="border-radius: 8px;">
-                                                            <div class="d-flex align-items-center">
-                                                                <div class="mr-3" style="width: 40px; height: 40px; background-color: #e5e5e5; border-radius: 8px;"></div>
-                                                                <div>
-                                                                    <div style="color: #171717;">스페셜 에디션</div>
-                                                                    <div class="text-14" style="color: #525252;">₩49,000</div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="text-right">
-                                                                <div style="color: #171717;">234개</div>
-                                                                <div class="text-14" style="color: #525252;">+25%</div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                                                         <div class="bg-white shadow-xl p-4" style="border-radius: 24px;">
+                                         <img src="assets/images/dashboard.png" alt="부트페이 쇼핑몰 설정 인터페이스" class="rounded" style="width: 100%; height: auto; max-width: none;">
+                                     </div>
                                 </div>
                             </div>
                         </div>
@@ -1049,7 +807,7 @@
                     <!-- end-analytics-section -->
 
                     <!-- start-trust-section -->
-                    <section id="trust-section" class="p-t-b-80 bg-white">
+                    <section id="trust-section" class="p-t-b-100 bg-white">
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12 section-header mb-5 text-center">
