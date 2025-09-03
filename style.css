@@ -3,6 +3,23 @@
     font-family: 'Noto Sans KR', sans-serif;
 }
 
+/* 외부 링크 스타일 */
+.external-link {
+    position: relative;
+}
+
+.external-link::after {
+    content: "↗";
+    font-size: 0.8em;
+    margin-left: 4px;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.external-link:hover::after {
+    opacity: 1;
+}
+
 /* 로고 애니메이션 컨테이너 */
 .logos-container {
     position: relative;
