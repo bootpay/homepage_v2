@@ -178,3 +178,35 @@ button[aria-expanded="true"] .accordion-arrow {
 button[aria-expanded="false"] .accordion-arrow {
     transform: rotate(0deg);
 }
+
+/* 서브페이지 헤더 스타일 */
+.main-header {
+    position: relative;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    background-color: transparent;
+}
+
+/* 서브페이지용 헤더 고정 스타일 */
+body.subpage .main-header.header-fixed {
+    position: fixed !important;
+    top: 0 !important;
+    background: rgba(15, 23, 42, 0.95) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.1) !important;
+}
+
+/* 메인페이지용 헤더 고정 스타일 (기존 blue 계열) */
+body:not(.subpage) .main-header.header-fixed {
+    position: fixed;
+    top: 0;
+    background: rgba(38, 61, 181, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
