@@ -158,3 +158,23 @@
 html {
     scroll-behavior: smooth;
 }
+
+/* 아코디언 아이콘 애니메이션 */
+.accordion-arrow {
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 6px solid #525252;
+    transition: transform 0.2s ease;
+    display: inline-block;
+    margin-left: 8px;
+}
+
+button[aria-expanded="true"] .accordion-arrow {
+    transform: rotate(180deg);
+}
+
+button[aria-expanded="false"] .accordion-arrow {
+    transform: rotate(0deg);
+}
